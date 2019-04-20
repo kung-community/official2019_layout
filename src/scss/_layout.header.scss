@@ -1,0 +1,131 @@
+#kung-header {
+  padding-bottom: 8px;
+
+  .kung-top {
+    position: relative;
+    height: 86px;
+    margin: 0;
+    padding: 0;
+
+    a.kung-logo {
+      position: relative;
+      display: block;
+      padding: 18px 10px;
+      margin: 20px 0 0 0;
+      float: left;
+      overflow: hidden;
+
+      img.kung-logo {
+        position: relative;
+        height: 30px;
+        display: inline-block;
+        margin-left: 68px;
+        vertical-align: bottom;
+      }
+      img.kung-duck {
+        position: absolute;
+        height: 98px;
+        top: 10px;
+        left: -2px;
+      }
+      span {
+        display: inline-block;
+        vertical-align: bottom;
+        line-height: 1;
+        font-size: 18px;
+        margin-left: 10px;
+        color: #515151;
+      }
+    }
+    a.kung-banner {
+      position: absolute;
+      display: block;
+      right: 0;
+      bottom: 0;
+      height: 60px;
+      min-width: 240px;
+      background-color: #F5F5F5;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      float: none;
+      clear: both;
+    }
+  }
+  .kung-gnb {
+    display: table;
+    background-color: #60ab20;
+    width: 100%;
+    table-layout: fixed;
+
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+      font-family: "Spoqa Han Sans";
+      font-weight: 500;
+      font-size: 14px;
+
+      a {
+        display: block;
+        line-height: 1;
+        color: #FFF;
+        text-decoration: none;
+        padding: 11px 10px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .kung-gnb-space {
+    display: block;
+    height: 8px;
+    border-left: 1px solid #60ab20;
+    border-right: 1px solid #60ab20;
+  }
+  .kung-gnb-detail {
+    display: table;
+    position: relative;
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid #60ab20;
+    border-top: 0;
+    box-sizing: border-box;
+
+    > ul {
+      display: table-cell;
+      padding: 0 6px 6px 6px;
+      margin: -4px 0 0 0;
+      list-style: none;
+      border-right: 1px solid #E5E5E5;
+
+      > li {
+        display: block;
+
+        > a {
+          display: inline-block;
+          padding: 4px;
+          line-height: 1;
+          color: #000;
+          font-family: "나눔고딕", "NanumGothic", "굴림", "Gulim", "맑은고딕", "Apple SD Gothic Neo", sans-serif;
+          font-size: 13px;
+          font-weight: normal;
+          letter-spacing: -1px;
+
+          &.active,
+          &:hover {
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+html, body { margin: 0; padding: 0; background-color: #FFF !important; }
+body { min-width: 1060px; }
+
+$border-color: #dfdfdf;
+$header_background: #42444E;
+$header_gray: #9799A8;
+$body_border_color: #DCDCDC;
+$naver_editor_border: #E5E5E5;
+$naver_editor_background: #FAFAFA;
+$aside_font: #5D5D5D;
+$kung_brand: #3ABF00;
+
+@import "./layout.main";

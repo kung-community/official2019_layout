@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.2">
+    <title xml:lang="ko">KUNG 2019 레이아웃</title>
+    <description xml:lang="ko">KUNG 2019 사이트 기본 레이아웃.</description>
+    <version>1.0</version>
+    <date>2019-04-12</date>
+    <author email_address="lee.donghyun@kung.kr" link="http://kung.kr">
+        <name xml:lang="ko">KUNG</name>
+    </author>
+    <menus>
+        <menu name="menu_top" maxdepth="2" default="true">
+            <title xml:lang="ko">전역 네비게이션 바</title>
+        </menu>
+    </menus>
+	<extra_vars>
+	</extra_vars>
+</layout>
