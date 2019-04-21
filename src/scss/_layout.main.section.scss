@@ -40,6 +40,9 @@ h4.section-title {
   .section-col33 {
     width: 33%;
   }
+  .section-col66 {
+    width: 67%;
+  }
   .section-col25 {
     width: 25%;
   }
@@ -76,7 +79,7 @@ section.main-banner {
 section.content-tab {
   position: relative;
   margin: 12px 0;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #DCDCDC;
 
   a.tab-banner {
     position: absolute;
@@ -197,10 +200,83 @@ section.content-tab {
     }
   }
 }
-section.content-section {
+section.content-event {
   padding: 16px;
   margin: 12px 0;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #DCDCDC;
+}
+section.content-section {
+  margin: 12px 0;
+  border: 1px solid #DCDCDC;
+
+  .section-category {
+    height: 40px;
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #E5E5E5;
+
+    .category-list {
+      display: table;
+      width: 100%;
+      height: 40px;
+      table-layout: fixed;
+      overflow: visible;
+
+      > div {
+        display: table-cell;
+        font-size: 13px;
+        padding: 0 16px;
+        border-right: 1px solid #E5E5E5;
+        text-align: center;
+        height: 40px;
+        overflow: visible;
+        white-space: nowrap;
+
+        > a {
+          display: block;
+          line-height: 1;
+          padding: 10px 0;
+          color: #7c7c7c;
+
+          > i {
+            font-size: 20px;
+            vertical-align: top;
+          }
+          > span {
+            display: inline-block;
+            line-height: 1;
+            margin-left: 6px;
+            padding: 3.5px 0;
+            font-size: 13px;
+            font-weight: 600;
+            vertical-align: top;
+          }
+        }
+
+        &[data-active="true"] {
+          background-color: #FFF;
+          border-bottom: 1px solid #FFF;
+        }
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+  }
+  .section-category-content {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    > li {
+      margin: 0;
+      padding: 16px;
+      display: none;
+
+      &[data-active="true"] {
+        display: block;
+      }
+    }
+  }
 }
 
 .kung-widget-list {
