@@ -73,7 +73,7 @@ section.main-banner {
     left: 0;
     bottom: 0;
     right: 0;
-    border: 1px solid rgba(0,0,0,.06);
+    border: 1px solid rgba(0,0,0,.08);
   }
 }
 section.content-tab {
@@ -86,7 +86,7 @@ section.content-tab {
     left: 7px;
     bottom: 0;
     width: 170px;
-    height: 80px;
+    height: 72px;
     background-color: #F5F5F5;
   }
   div.section-title {
@@ -271,6 +271,7 @@ section.content-section {
       margin: 0;
       padding: 16px;
       display: none;
+      height: 358px;
 
       &[data-active="true"] {
         display: block;
@@ -359,7 +360,7 @@ section.content-section {
         left: 0;
         bottom: 0;
         right: 0;
-        border: 1px solid rgba(0,0,0,.06);
+        border: 1px solid rgba(0,0,0,.08);
       }
     }
     .title {
@@ -418,58 +419,129 @@ section.content-section {
     }
   }
 }
+.kung-widget-image {
+  list-style: none;
+  margin: -8px;
+  padding: 0;
 
-
-
-.kung-widget-one2 {
-  position: relative;
-  min-height: 140px;
-  padding-left: 152px;
-
-  .thumbnail-one {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 140px;
+  > li {
+    display: table;
+    width: 218px;
+    padding: 8px;
+    float: left;
+    table-layout: fixed;
 
     .thumbnail {
-      position: relative;
-      display: block;
-      width: 140px;
-      height: 92px;
-      background-color: #F5F5F5;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+      display: table-cell;
+      width: 100px;
+      height: 70px;
 
-      &::after {
-        content: '';
+      a {
         display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        border: 1px solid rgba(0,0,0,.06);
+        position: relative;
+        width: 100px;
+        height: 70px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          border: 1px solid rgba(0,0,0,.08);
+        }
+      }
+
+      & + .description {
+        height: 56px;
+        padding: 8px 0 0 8px;
+        border: 0;
+        background-color: transparent;
+
+        .infos {
+          font-size: 12px;
+          margin-top: 4px;
+
+          .category ~ * {
+            display: none;
+          }
+        }
       }
     }
-    .title {
-      display: -webkit-box;
-      white-space: normal;
-      -webkit-line-clamp: 2;
-      text-overflow: ellipsis;
-      -webkit-box-orient: vertical;
-      word-wrap: break-word;
-      margin: 10px 0 0 0;
-      padding: 0;
-      line-height: 1.5em;
-      font-size: 14px;
-      font-weight: 500;
+    .description {
+      display: table-cell;
+      vertical-align: top;
+      height: 52px;
       overflow: hidden;
-      color: #222;
+      padding: 6px 8px;
+      background-color: #FBFBFB;
+      border: 1px solid #E5E5E5;
 
-      &:hover {
-        text-decoration: underline;
+      .title {
+        display: -webkit-box;
+        white-space: normal;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        word-wrap: break-word;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5em;
+        font-size: 13px;
+        font-weight: 500;
+        height: 38px;
+        overflow: hidden;
+
+        a {
+          display: inline;
+          color: #222;
+        }
+      }
+      .infos {
+        vertical-align: bottom;
+        margin: 6px 0 0 0;
+        padding: 0;
+        line-height: 1;
+        font-size: 0;
+        white-space: nowrap;
+        color: #a1a1a1;
+
+        a {
+          color: #a1a1a1;
+
+          &:hover {
+            color: #60ab20;
+            text-decoration: underline;
+          }
+        }
+        a, span {
+          display: inline;
+          border-left: 1px solid #E5E5E5;
+          padding-left: 8px;
+          margin-left: 8px;
+          font-size: 12px;
+
+          i {
+            vertical-align: bottom;
+            margin-right: 4px;
+            font-size: 1.12em;
+          }
+          &:first-child {
+            border-left: 0;
+            padding-left: 0;
+            margin-left: 0;
+          }
+        }
+        .category {
+          margin: 0;
+          padding: 0;
+          line-height: 1;
+        }
       }
     }
   }
