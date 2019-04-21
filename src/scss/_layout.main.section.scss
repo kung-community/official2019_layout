@@ -164,13 +164,14 @@ section.content-tab {
 
       li {
         margin: 0;
-        padding: 10px 0 0 0;
+        padding: 8px 0 0 0;
         line-height: 1;
 
         a {
           display: inline;
           line-height: 0;
           color: #7C7C7C;
+          font-size: 13px;
 
           &[data-active="true"] {
             color: #60ab20;
@@ -271,7 +272,11 @@ section.content-section {
       margin: 0;
       padding: 16px;
       display: none;
-      height: 358px;
+      height: 355px;
+
+      h4.section-title {
+        font-size: 14px;
+      }
 
       &[data-active="true"] {
         display: block;
@@ -297,7 +302,7 @@ section.content-section {
       line-height: 1;
       color: #222;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: normal;
       font-family: 'Dotum', sans-serif;
       width: 100%;
@@ -325,6 +330,30 @@ section.content-section {
       font-size: 20px;
       color: #666;
       line-height: 2px;
+    }
+  }
+
+  &.best-list {
+    > li {
+      padding: 0 0 0 20px;
+
+      a {
+        padding: 8px 0 4px 0;
+      }
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i})::before {
+          content: '#{$i}';
+          color: #ff0078;
+          font-style: italic;
+          font-size: 18px;
+          position: absolute;
+          height: 18px;
+          line-height: 1;
+          text-align: left;
+          margin-top: -9px;
+        }
+      }
     }
   }
 }
@@ -372,7 +401,7 @@ section.content-section {
       word-wrap: break-word;
       margin: 6px 0 0 0;
       padding: 0;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       overflow: hidden;
       color: #222;
@@ -386,7 +415,7 @@ section.content-section {
       padding: 0;
       line-height: 1;
       white-space: nowrap;
-      font-size: 13px;
+      font-size: 12px;
       color: #a1a1a1;
 
       span,
