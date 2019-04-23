@@ -8,8 +8,11 @@
         <name xml:lang="ko">KUNG</name>
     </author>
     <menus>
-        <menu name="menu_top" maxdepth="2" default="true">
-            <title xml:lang="ko">전역 네비게이션 바</title>
+        <menu name="menu_gnb" maxdepth="2" default="true">
+            <title xml:lang="ko">메인메뉴</title>
+        </menu>
+        <menu name="menu_links" maxdepth="1">
+            <title xml:lang="ko">자주가는 사이트</title>
         </menu>
     </menus>
 	<extra_vars>

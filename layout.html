@@ -20,71 +20,20 @@
                 <a href="#" class="kung-banner">이벤트 배너</a>
             </div>
             <div class="kung-gnb">
-                <div><a href="/">커뮤니티</a></div>
-                <div><a href="/">강의정보</a></div>
-                <div><a href="/">미디어</a></div>
-                <div><a href="/">생활정보</a></div>
-                <div><a href="/">KU시네마테크</a></div>
-                <div><a href="/">캠퍼스</a></div>
-                <div><a href="/">KUNG 운영센터</a></div>
+                <div loop="$menu_gnb->list=>$key1,$val1"><a href="{$val1['href']}">{$val1['link']|noescape}</a></div>
             </div>
             <span class="kung-gnb-space"></span>
             <div class="kung-gnb-detail">
-                <ul>
-                    <li><a href="/">전체 게시물</a></li>
-                    <li><a href="/">베스트 게시물</a></li>
-                    <li><a href="/">자유게시판</a></li>
-                    <li><a href="/">익명게시판</a></li>
-                    <li><a href="/">사랑방</a></li>
-                    <li><a href="/">취업게시판</a></li>
-                    <li><a href="/">공모전/대외활동</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/">시간표</a></li>
-                    <li><a href="/">강의게시판</a></li>
-                    <li><a href="/">강의정보</a></li>
-                    <li><a href="/">강의자료</a></li>
-                    <li><a href="/">종합강의시간표</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/">건대교지</a></li>
-                    <li><a href="/">건대신문</a></li>
-                    <li><a href="/">KU 영자신문</a></li>
-                    <li><a href="/">KU ABS</a></li>
-                    <li><a href="/">KLOSET</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/">KU 커머스</a></li>
-                    <li><a href="/">재학생 이벤트</a></li>
-                    <li><a href="/">이벤트 발표</a></li>
-                    <li><a href="/">대학생활 꿀팁</a></li>
-                    <li><a href="/">중고장터</a></li>
-                    <li><a href="/">자취방 (원룸/투룸)</a></li>
-                    <li><a href="/">건단지 프로젝트</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/">현재상영작/기획전</a></li>
-                    <li><a href="/">상영예정작</a></li>
-                    <li><a href="/">상영시간표</a></li>
-                    <li><a href="/">뉴스래터</a></li>
-                    <li><a href="/">티켓교환 이벤트</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/">대학본부</a></li>
-                    <li><a href="/">중앙동아리</a></li>
-                    <li><a href="/">동아리원 모집</a></li>
-                    <li><a href="/">총학생회</a></li>
-                    <li><a href="/">학생복지위원회</a></li>
-                    <li><a href="/">동아리연합회</a></li>
-                    <li><a href="/">학교서류양식</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/">공지사항</a></li>
-                    <li><a href="/">자주묻는질문</a></li>
-                    <li><a href="/">1:1문의</a></li>
-                    <li><a href="/">게시판신설 건의</a></li>
-                    <li><a href="/">재학생인증</a></li>
-                    <li><a href="/">가위바위KUNG!</a></li>
+                <ul loop="$menu_gnb->list=>$key1,$val1">
+                    <block cond="$val1['list']">
+                        <li loop="$val1['list']=>$key2,$val2">
+                            <a
+                                href="{$val2['href']}"
+                                class="active"|cond="$val2['selected']"
+                                target="_blank"|cond="$val2['open_window']=='Y'"
+                            >{$val2['link']|noescape}</a>
+                        </li>
+                    </block>
                 </ul>
             </div>
         </div>
