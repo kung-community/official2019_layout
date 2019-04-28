@@ -72,6 +72,7 @@
           line-height: 1;
           vertical-align: bottom;
 
+          &:focus,
           &:hover {
             text-decoration: none;
           }

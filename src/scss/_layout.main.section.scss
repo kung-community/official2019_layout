@@ -38,10 +38,10 @@ h4.section-title {
     }
   }
   .section-col33 {
-    width: 33%;
+    width: 33.3%;
   }
   .section-col66 {
-    width: 67%;
+    width: 66.7%;
   }
   .section-col25 {
     width: 25%;
@@ -357,6 +357,11 @@ section.content-section {
       }
     }
   }
+  &.padding {
+    > li {
+      padding-top: 5px;
+    }
+  }
 }
 .kung-widget-gallery {
   .thumbnail-container {
@@ -453,6 +458,7 @@ section.content-section {
   list-style: none;
   margin: -8px;
   padding: 0;
+  overflow: hidden;
 
   > li {
     display: table;
@@ -499,6 +505,18 @@ section.content-section {
 
           .category ~ * {
             display: none;
+          }
+        }
+      }
+      &.border + .description {
+        background-color: #FBFBFB;
+        border: 1px solid #E5E5E5;
+        border-left: 0;
+        padding-right: 8px;
+
+        .infos {
+          a, span {
+            font-size: 11px;
           }
         }
       }
@@ -572,6 +590,124 @@ section.content-section {
           padding: 0;
           line-height: 1;
         }
+      }
+
+      &.president {
+        .title {
+          font-size: 14px;
+          line-height: 1.4em;
+        }
+
+        &.color-tint {
+          background-color: #52c7c7;
+          border-color: #4ab3b3;
+
+          .title a {
+            color: #FFF;
+            font-weight: bold;
+          }
+          .infos span,
+          .infos a {
+            color: #f1f1f1 !important;
+          }
+        }
+        &.color-blue {
+          background-color: #559bfa;
+          border-color: #4d8be1;
+
+          .title a {
+            color: #FFF;
+            font-weight: bold;
+          }
+          .infos span,
+          .infos a {
+            color: #f1f1f1 !important;
+          }
+        }
+        &.color-orange {
+          background-color: #eb9619;
+          border-color: #ca8114;
+
+          .title a {
+            color: #FFF;
+            font-weight: bold;
+          }
+          .infos span,
+          .infos a {
+            color: #f1f1f1 !important;
+          }
+        }
+      }
+    }
+
+    &:first-child:last-child {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &.single {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  &.news-section {
+    margin: 0;
+    padding: 0;
+
+    > li {
+      padding: 0 0 16px 0;
+      width: auto;
+
+      .description .infos {
+        a, span {
+          display: inline !important;
+        }
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+.kung-widget-cinema {
+  display: table;
+  list-style: none;
+  margin: -8px;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  table-layout: fixed;
+
+  > li {
+    display: table-cell;
+    padding: 0 8px;
+
+    .thumbnail {
+      display: block;
+      position: relative;
+      height: 112px;
+      background-color: #FBFBFB;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .title {
+      display: block;
+      padding: 0;
+      line-height: 1;
+      color: #222;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: normal;
+      font-family: 'Dotum', sans-serif;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      a {
+        color: #222;
       }
     }
   }
