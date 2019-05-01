@@ -81,13 +81,14 @@ section.content-tab {
   margin: 12px 0;
   border: 1px solid #DCDCDC;
 
-  a.tab-banner {
+  .tab-banner {
     position: absolute;
     left: 7px;
     bottom: 0;
     width: 170px;
     height: 72px;
-    background-color: #F5F5F5;
+    font-size: 0;
+    color: transparent;
   }
   div.section-title {
     position: relative;

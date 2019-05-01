@@ -37,14 +37,16 @@
         color: #515151;
       }
     }
-    a.kung-banner {
+    .header-banner {
       position: absolute;
       display: block;
       right: 0;
       bottom: 0;
       height: 60px;
       min-width: 280px;
-      background-color: #F5F5F5;
+      background-color: #FFF;
+      font-size: 0;
+      color: transparent;
     }
 
     &::after {
