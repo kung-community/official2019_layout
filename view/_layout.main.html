@@ -196,16 +196,17 @@
                 </div>
             </div>
         </section>
-        {@ $sectionTab = rand(1, 6); }
+        {@ $sectionTab = rand(1, 5); }
         <section class="content-section" role="tab-container" id="section-tab">
             <div class="section-category">
                 <nav class="category-list" role="tab-head">
                     <div data-index="1" data-active="true"|cond="$sectionTab == 1"><a href="#"><i class="xi-forum"></i><span>커뮤니티</span></a></div>
                     <div data-index="2" data-active="true"|cond="$sectionTab == 2"><a href="#"><i class="xi-group"></i><span>동아리</span></a></div>
                     <div data-index="3" data-active="true"|cond="$sectionTab == 3"><a href="#"><i class="xi-basket"></i><span>중고장터</span></a></div>
-                    <div data-index="4" data-active="true"|cond="$sectionTab == 4"><a href="#"><i class="xi-home"></i><span>원룸/투룸</span></a></div>
-                    <div data-index="5" data-active="true"|cond="$sectionTab == 5"><a href="#"><i class="xi-movie"></i><span>KU시네마</span></a></div>
-                    <div data-index="6" data-active="true"|cond="$sectionTab == 6"><a href="#"><i class="xi-school"></i><span>강의정보</span></a></div>
+                    <!--<div data-index="4" data-active="true"|cond="$sectionTab == 4"><a href="#"><i class="xi-home"></i><span>원룸/투룸</span></a></div>-->
+                    <div data-index="4" data-active="true"|cond="$sectionTab == 4"><a href="#"><i class="xi-movie"></i><span>KU시네마</span></a></div>
+                    <div data-index="5" data-active="true"|cond="$sectionTab == 5"><a href="#"><i class="xi-school"></i><span>강의정보</span></a></div>
+                    <div></div>
                 </nav>
             </div>
             <ul class="section-category-content" role="tab-body">
@@ -218,13 +219,13 @@
                 <li data-index="3" data-active="true"|cond="$sectionTab == 3">
                     <include target="./_section.flee.html" />
                 </li>
+                <!--<li data-index="4" data-active="true"|cond="$sectionTab == 4">-->
+                    <!--<include target="./_section.room.html" />-->
+                <!--</li>-->
                 <li data-index="4" data-active="true"|cond="$sectionTab == 4">
-                    <include target="./_section.room.html" />
-                </li>
-                <li data-index="5" data-active="true"|cond="$sectionTab == 5">
                     <include target="./_section.cinema.html" />
                 </li>
-                <li data-index="6" data-active="true"|cond="$sectionTab == 6">
+                <li data-index="5" data-active="true"|cond="$sectionTab == 5">
                     <include target="./_section.lecture.html" />
                 </li>
             </ul>
