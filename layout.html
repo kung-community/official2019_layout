@@ -40,22 +40,27 @@
     </div>
 </header>
 <section>
+    <!--@if($layout_info->layout_type == 'main')-->
     <include target="./view/_layout.main.html" cond="true" />
+    <!--@elseif($layout_info->layout_type == 'sub')-->
+    <div class="middle-content">
+        <div id="kung-content">
+            {$content|noescape}
+        </div>
+        <include target="./view/_layout.aside.html" cond="true" />
+    </div>
+    <!--@else-->
     <div class="middle-content" cond="false">
         {$content|noescape}
     </div>
+    <!--@end-->
 </section>
 <footer>
     <div id="kung-footer">
         <div class="middle-content">
             <div class="kung-footer-nav">
                 <ul>
-                    <li><a href="/intro">KUNG 소개</a></li>
-                    <li><a href="/intro_admin">운영진 소개</a></li>
-                    <li><a href="http://ku-kung.com/ku_question">이용문의</a></li>
-                    <li><a href="http://ku-kung.com/ku_banner">광고&amp;제휴문의</a></li>
-                    <li><a href="http://kung.kr/ku_notice/3107155">이용약관</a></li>
-                    <li><a href="#">개인정보취급방침</a></li>
+                    <li loop="$menu_footer->list=>$key1,$val1"><a href="{$val1['href']}">{$val1['link']|noescape}</a></li>
                     <li><span><i class="xi-copyright"></i> 2013 - 2019 <span>KUNG Community</span>, Powered by XpressEngine</span></li>
                 </ul>
                 <ul style="padding-top: 8px;">

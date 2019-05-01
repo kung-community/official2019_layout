@@ -10,14 +10,14 @@
                         <block cond="$logged_info->is_admin=='Y' && !$site_module_info->site_srl"><a href="{getUrl('','module','admin')}" target="_blank">{$lang->cmd_management}</a></block>
                     </h3>
                     {@
-                        $oPointModel = &getModel('point');
-                        $point_info = $oPointModel->getPoint($logged_info->member_srl);
+                    $oPointModel = &getModel('point');
+                    $point_info = $oPointModel->getPoint($logged_info->member_srl);
 
-                        $oModuleModel = &getModel('module');
-                        $config = $oModuleModel->getModuleConfig('point');
-                        $level = $oPointModel->getLevel($point_info, $config->level_step);
-                        $level_count = $level+1;
-                        $nextPoint = $config->level_step[$level_count];
+                    $oModuleModel = &getModel('module');
+                    $config = $oModuleModel->getModuleConfig('point');
+                    $level = $oPointModel->getLevel($point_info, $config->level_step);
+                    $level_count = $level+1;
+                    $nextPoint = $config->level_step[$level_count];
                     }
                     <p>LEVEL : {$level_count} kg <span>|</span> POINT : {$point_info}</p>
                 </div>
@@ -91,20 +91,13 @@
                 <li data-index="3" data-active="true"|cond="$bestTab == 3">3</li>
             </ul>
         </section>
-        <section class="aside-section aside-banner">광고배너</section>
-        <section class="aside-section link-map">
-            <h4 class="section-title">건국대학교 주요 사이트</h4>
-            <ul>
-                <li loop="$menu_links->list=>$key1,$val1"><a href="{$val1['href']}">{$val1['link']|noescape}</a></li>
-            </ul>
-        </section>
         <section class="aside-section aside-adsense">
             <ins
-                class="kakao_ad_area"
-                style="display:none;"
-                data-ad-unit="DAN-1iuyshkojbsj8"
-                data-ad-width="300"
-                data-ad-height="250"
+                    class="kakao_ad_area"
+                    style="display:none;"
+                    data-ad-unit="DAN-1iuyshkojbsj8"
+                    data-ad-width="300"
+                    data-ad-height="250"
             />
             <script type="text/javascript" src="//t1.daumcdn.net/adfit/static/ad.min.js" async></script>
         </section>
